@@ -1,0 +1,56 @@
+[2018-04-11T02:48:36.699] [INFO] logs - Clicking onCreate an App field
+[2018-04-11T02:48:36.701] [INFO] logs - Clicking onLets Get Started field
+[2018-04-11T02:48:36.702] [INFO] logs - Clicking onNew Page field
+[2018-04-11T02:48:36.702] [INFO] logs - Sending input value toPage Name field
+[2018-04-11T02:48:36.702] [INFO] logs - Clicking onCreate field
+[2018-04-11T02:48:36.703] [INFO] logs - Clicking onMessaging field
+[2018-04-11T02:48:36.703] [INFO] logs - DraggingShare An SMStoMain Screen
+[2018-04-11T02:48:36.704] [INFO] logs - DraggedShare An SMStoMain Screen
+[2018-04-11T02:48:36.704] [INFO] logs - DraggingShare An SMStoMain Screen
+[2018-04-11T02:48:36.704] [INFO] logs - DraggedShare An SMStoMain Screen
+[2018-04-11T02:48:36.705] [INFO] logs - DraggingStart App ConnectortoSMS Receptor
+[2018-04-11T02:48:36.705] [INFO] logs - DraggedStart App ConnectortoSMS Receptor
+[2018-04-11T02:48:36.705] [INFO] logs - Sending input value toPhone Number field
+[2018-04-11T02:48:36.705] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.705] [INFO] logs - DraggingShare An Emailtox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.706] [INFO] logs - DraggedShare An Emailtox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.706] [INFO] logs - DraggingSMS East ConnectortoEmail Receptor
+[2018-04-11T02:48:36.706] [INFO] logs - DraggedSMS East ConnectortoEmail Receptor
+[2018-04-11T02:48:36.706] [INFO] logs - Sending input value toSMTP Host field
+[2018-04-11T02:48:36.707] [INFO] logs - Sending input value toPort field
+[2018-04-11T02:48:36.707] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.707] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.710] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.710] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.710] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.710] [INFO] logs - Sending input value toMesage Text field
+[2018-04-11T02:48:36.711] [INFO] logs - Clicking onMessaging field
+[2018-04-11T02:48:36.711] [INFO] logs - DraggingHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.711] [INFO] logs - DraggedHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.711] [INFO] logs - DraggingSMS West ConnectortoHang up or Exit1 Receptor
+[2018-04-11T02:48:36.711] [INFO] logs - DraggedSMS West ConnectortoHang up or Exit1 Receptor
+[2018-04-11T02:48:36.711] [INFO] logs - DraggingHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.712] [INFO] logs - DraggedHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.712] [INFO] logs - DraggingHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.712] [INFO] logs - DraggedHang up or Exittox-axis:1000,y-axis:0
+[2018-04-11T02:48:36.712] [INFO] logs - DraggingEmail East ConnectortoHang up or Exit2 Receptor
+[2018-04-11T02:48:36.712] [INFO] logs - DraggedEmail East ConnectortoHang up or Exit2 Receptor
+[2018-04-11T02:48:36.712] [INFO] logs - DraggingEmail West ConnectortoHang up or Exit3 Receptor
+[2018-04-11T02:48:36.713] [INFO] logs - DraggedEmail West ConnectortoHang up or Exit3 Receptor
+[2018-04-11T02:48:43.101] [INFO] logs - Clicked onCreate an App field
+[2018-04-11T02:48:43.147] [INFO] logs - Clicked onLets Get Started field
+[2018-04-11T02:48:43.215] [INFO] logs - Clicked onNew Page field
+[2018-04-11T02:48:43.345] [INFO] logs - Sent input value toPage Name field
+[2018-04-11T02:48:43.449] [INFO] logs - Clicked onCreate field
+[2018-04-11T02:48:43.570] [INFO] logs - Clicked onMessaging field
+[2018-04-11T02:48:53.055] [INFO] logs - Sent input value toPhone Number field
+[2018-04-11T02:48:53.125] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:01.459] [INFO] logs - Sent input value toSMTP Host field
+[2018-04-11T02:49:01.542] [INFO] logs - Sent input value toPort field
+[2018-04-11T02:49:01.627] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:01.716] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:01.794] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:01.873] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:01.931] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:02.009] [INFO] logs - Sent input value toMesage Text field
+[2018-04-11T02:49:07.200] [INFO] logs - Clicked onMessaging field

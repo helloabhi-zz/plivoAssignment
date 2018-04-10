@@ -1,0 +1,10 @@
+[{
+	"smtp": "smtp.gmail.com",
+	"port": "9000",
+	"username": "abhi09",
+	"password": "abhishekio",
+	"fromAddress": "a@gmail.com",
+	"toAddress": "b@gmail.com",
+	"subject": "test",
+    "msgText": "SMS not sent"
+}]
