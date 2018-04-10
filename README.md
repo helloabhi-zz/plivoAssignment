@@ -7,9 +7,7 @@ Installation
 
 Install node.js, by either crack open your favourite package manager: typically apt-get install nodejs on Debian/Ubuntu Linux, brew install node on a Mac or directly from the website http://nodejs.org
 
-Clone the repository from github:
-
-``` ```
+Clone this repository from github:
 
 CD into the repository
 
@@ -18,11 +16,16 @@ Install the below mentioned dependencies by:
 
 ``` $ npm install -g protractor ```
 ``` $ npm install log4js ```
+``` $ npm install protractor-jasmine2-html-reporter ```
+``` $ webdriver-manager update ```
+
+In new terminal start webdriver
+
+``` $ webdriver-manager start ```
 
 Fire up Protractor to run the tests!
 
 ``` $ protractor conf.js ```
-
 
 
 
@@ -66,66 +69,71 @@ Ex: 1.1
 framework designing. Page object is an object oriented class that serves as an interface
 between the tests and application under test.
 It contains
+
 * *Locators*: All the locators specific to a particular page and it is assigned to a named
 variable.
+
 * *ElementName*:  All the locators present in a page is assigned a name for easy debugging,
 which are to be used in the logger.
+
 * *Methods*: All the actions that needs to be performed in a particular page needs to be
 present in a particular page object.
+
 Below mentioned example should give a better clarity.Ex: 2.1
 Specs/spec.js
 
 ```
-1. it('should be able to login using valid Email ID and Password and clicking on Sign In butto
+it('should be able to login using valid Email ID and Password and clicking on Sign In butto
 n', function() {
-2. Login_Page.enterEmailAddress(testData[0].emailID);
-3. Login_Page.enterPassword(testData[0].password);
-4. Login_Page.clickOnSignIn();
-5. expect(Volunteering_Home.getPageTitle()).toEqual('p3 by NextGen -
-CSR & Development Capital Management Platform');
-6. });
+ Login_Page.enterEmailAddress(testData[0].emailID);
+ Login_Page.enterPassword(testData[0].password);
+ Login_Page.clickOnSignIn();
+ expect(home_page.getPageTitle()).toEqual('expectedTitle');
+});
 ```
 PageObjects/Login_Page.js
 ```
-1. var Login_Page = function() {
-2. var emailIDLocator = element(by.model('credentials.email'));
-3. var passwordLocator = element(by.model('credentials.password'));
-4. var signInLocator = element(by.buttonText('Sign In'));
-5. var emailIDName = "Email input box";
-6. var passwordName = "Password input box";
-7. var signInName = "Sign In";
-8. this.enterEmailAddress = function(value) {
-9. FunctionLibrary.sendKeys(emailIDLocator, value, emailIDName);
-10. };
-11. this.enterPassword = function(value) {
-12. FunctionLibrary.sendKeys(passwordLocator, value, passwordName);
-13. };
-14. this.clickOnSignIn = function() {
-15. FunctionLibrary.click(signInLocator, signInName); // FunctionLibrary.g
-16. };
-17. };
-18. module.exports = new Login_Page();
+ var Login_Page = function() {
+ var emailIDLocator = element(by.model('credentials.email'));
+ var passwordLocator = element(by.model('credentials.password'));
+ var signInLocator = element(by.buttonText('Sign In'));
+ 
+ var emailIDName = "Email input box";
+ var passwordName = "Password input box";
+ var signInName = "Sign In";
+ 
+ this.enterEmailAddress = function(value) {
+   FunctionLibrary.sendKeys(emailIDLocator, value, emailIDName);
+ };
+ this.enterPassword = function(value) {
+   FunctionLibrary.sendKeys(passwordLocator, value, passwordName);
+ };
+ this.clickOnSignIn = function() {
+   FunctionLibrary.click(signInLocator, signInName);
+ };
+ };
+ module.exports = new Login_Page();
 ```
 HelperModule/FunctionaLibrary.js
 ```
-1. this.sendKeys = function(locator, value, name) {
-2. try {
-3. logger.info('Sending input value to' + name + ' field');
-4. locator.sendKeys(value);
-5. logger.info('Sent input value to' + name + ' field');
-6. } catch (err) {
-7. logger.info('Error in sending input value to' + name + ' field');
-8. }
-9. };
-10. this.click = function(locator, name) {
-11. try {
-12. logger.info('Clicking on' + name + ' field');
-13. locator.click();
-14. logger.info('Clicked on' + name + ' field');
-15. } catch (err) {
-16. logger.info('Error while clicking on' + name + ' field');
-17. }
-18. };
+this.click = function(locator, name) {
+        logger.info('Clicking on' + name + ' field');
+        locator.click().then(function() {
+            logger.info('Clicked on' + name + ' field');
+        }, function(error) {
+            logger.error('exception occoured while clicking on' + name + 'field' + 'Stack Trace:' + error.message)
+            throw new Error(error)
+        })
+     };
+this.sendKeys = function(locator, value, name) {
+        logger.info('Sending input value to' + name + ' field');
+        locator.sendKeys(value).then(function() {
+            logger.info('Sent input value to' + name + ' field');
+        }, function(error) {
+            logger.error('exception occoured while sending input value to' + name + 'field' + 'Stack Trace:' + error.message)
+            throw new Error(error)
+        })
+     };
 ```
 **Advantages of using this pattern correctly:**
 
@@ -155,7 +163,7 @@ maintainance of the code and makes it more coherant and easy to understand.
 TestData/Login_Page_Data.json
 ```
 1. [{
-2. "emailID": "abhishek.sahu@nextgenpms.com",
+2. "emailID": "abhishek.sahu@xyz.com",
 3. "password": "********"
 4. }]
 ```
